@@ -1,0 +1,290 @@
+body {
+   box-sizing: border-box;
+   background-image: url(../gambar/kuning.jpg);
+   color: #fff;
+   width: 100%;
+   height: 100vh;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   overflow: hidden;
+   font-family: "montserrat",
+      sans-serif;
+   line-height: 1.5;
+}
+
+main {
+   padding: 35px 4rem;
+
+}
+
+.navbar {
+   position: fixed;
+   top: 30%;
+   margin-left: 40px;
+}
+
+a {
+   font-size: 0;
+   color: whitesmoke;
+   /* letter-spacing: 2px; */
+   text-decoration: none;
+}
+
+a:nth-child(1) {
+   margin-bottom: 150px;
+}
+
+.navbar ul {
+   padding: 0;
+   transform: translate(-450px, 0);
+}
+
+.navbar ul li {
+   display: block;
+   margin: 98px;
+   width: 300px;
+   text-align: right;
+   padding: 10px;
+   border-radius: 0 30px 30px 0;
+   /* transition: .5s; */
+   animation: head 4s;
+}
+
+.navbar ul li:hover {
+   transform: translate(95px, 0);
+   background: linear-gradient(45deg, #ff146a, #ffeb27);
+   transition: .5s;
+}
+
+
+.navbar ul li:hover a {
+   color: #59a7db;
+   font-size: 24px;
+   animation: animate 2s;
+}
+
+.navbar ul li:hover i {
+   color: rgb(119, 4, 4);
+   background: whitesmoke;
+   transform: rotate(360deg);
+   transition: .5s;
+
+}
+
+.navbar ul li i {
+   margin-left: 10px;
+   color: whitesmoke;
+   background: #59a7db;
+   padding: 10px;
+   border-radius: 50%;
+   width: 20px;
+   height: 20px;
+   font-size: 20px;
+   animation: animate 2s;
+   transform: rotate(0deg);
+}
+
+
+.lg-heading {
+   margin: 0;
+   font-weight: 500;
+   font-size: 5rem;
+   animation: head 4s;
+}
+
+.text-secondary {
+   color: #59a7db;
+}
+
+.sm-heading {
+   padding: 0;
+   font-size: 30px;
+   font-weight: 500;
+   margin-top: 0.5rem;
+}
+
+@keyframes head {
+   0% {
+      transform: scale(0.5);
+      opacity: 0;
+      transform: translate(-50%);
+   }
+
+   50% {
+      /* transform: translate3d(0, 5px, 0); */
+      /* transform: scale(1.2); */
+   }
+
+   100% {
+      transform: scale(1);
+      opacity: 1;
+      transition: 1s ease-out;
+   }
+}
+
+@keyframes animate {
+   0% {
+      transform: scale(0.5);
+      opacity: 0;
+      transition-delay: 3s;
+   }
+
+   100% {
+      transform: scale(1);
+      opacity: 1;
+      transform: translate(-50%, -50%);
+      transition-delay: 3s;
+   }
+}
+
+/* ------------------------------------------------------- */
+
+/* contact */
+
+.boxes {
+   position: absolute;
+   top: 60%;
+   left: 30%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   animation: animate 6s;
+}
+
+
+.email,
+.phone {
+   margin: 82px auto;
+   width: 400px;
+   height: 70px;
+   padding: 0.375rem 0.375rem 0;
+   background: #eee;
+   border-radius: 8px;
+   box-shadow: inset 2 3px 5px 1px #e6c403;
+   perspective: 30rem;
+   cursor: pointer;
+}
+
+.cover {
+   transform-origin: center bottom;
+   transform-style: preserve-3d;
+   text-align: center;
+}
+
+.cover,
+.cover>* {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.email .cover img {
+   margin-top: 8px;
+   width: 60px;
+   height: 60px;
+   filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.phone .cover img {
+   margin-top: 7px;
+   width: 70px;
+   height: 65px;
+   filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.outer {
+   background-color: #e9c603;
+   border-radius: 0.25rem;
+}
+
+.email:hover .cover {
+   transform: rotateX(-120deg);
+}
+
+.phone:hover .cover {
+   transform: rotateX(-120deg);
+}
+
+.email,
+.email div {
+   transition-duration: 0.7s;
+   transition-timing-function: ease;
+}
+
+.phone,
+.phone div {
+   transition-duration: 0.7s;
+   transition-timing-function: ease;
+}
+
+.isi {
+   color: rgb(78, 76, 76);
+   text-align: center;
+   font-weight: 500;
+   font-size: 30px;
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   line-height: 1.5;
+   margin-top: 7px;
+   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.phone .isi {
+   font-size: 35px;
+}
+
+@media screen and (max-width: 823px) {
+   body {
+      text-align: center;
+      background: #e9c603;
+   }
+
+   .boxes {
+      position: absolute;
+      top: 62%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+   }
+
+   .lg-heading {
+
+      font-size: 48px;
+   }
+
+   .text-secondary {
+      color: #59a7db;
+   }
+
+   .sm-heading {
+      padding: 0;
+      font-size: 33px;
+   }
+
+   .phone .isi,
+   .isi {
+      font-size: 22px;
+   }
+
+   .email,
+   .phone {
+      width: 280px;
+      height: 70px;
+   }
+
+
+
+
+
+   .navbar ul li:hover {
+      transform: translate(0, 0);
+      background: none;
+   }
+
+   .navbar ul li:hover a {
+      font-size: 0px;
+   }
+
+
+}
